@@ -49,6 +49,16 @@ import java.nio.charset.StandardCharsets;
  * String plaintext = SecureApi.decrypt(ciphertext, key);
  * }</pre>
  *
+ * <h3>Additional variants</h3>
+ * <ul>
+ *   <li>{@link #encryptWithoutCompression(String, String)} /
+ *       {@link #decryptWithoutCompression(String, String)} — skips Gzip compression,
+ *       suitable for small or pre-compressed data.</li>
+ *   <li>{@link #encryptBytes(byte[], String)} /
+ *       {@link #decryptBytes(byte[], String)} — raw byte-level AES-GCM only,
+ *       no compression or Base64 encoding.</li>
+ * </ul>
+ *
  * <p>For fine-grained control, use the individual classes in the
  * {@link com.wolonghy.secure.api.crypto}, {@link com.wolonghy.secure.api.codec},
  * and {@link com.wolonghy.secure.api.compress} packages directly.</p>
@@ -58,6 +68,7 @@ import java.nio.charset.StandardCharsets;
  * @see AesGcmCipher
  * @see GzipCompressor
  * @see Base64Codec
+ * @see SecureApiException
  */
 public final class SecureApi {
 
