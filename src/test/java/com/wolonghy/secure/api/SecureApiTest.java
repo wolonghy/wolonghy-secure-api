@@ -28,6 +28,9 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Unit tests for the wolonghy-secure-api library.
  *
+ * <p>Covers integration tests for {@link SecureApi} and component-level tests for
+ * {@link AesGcmCipher}, {@link Base64Codec}, and {@link GzipCompressor}.</p>
+ *
  * @author Zhang Ze
  * @since 1.0.0
  */
